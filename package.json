@@ -1,0 +1,12 @@
+{
+  "name": "developer-portfolio",
+  "version": "4.6.0",
+  "private": true,
+  "description": "Editorial React portfolio for applied AI, data analytics and software projects",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node verify.mjs && node build.mjs",
+    "verify": "node verify.mjs"
+  }
+}
