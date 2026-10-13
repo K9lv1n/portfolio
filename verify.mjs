@@ -21,7 +21,7 @@ const css = fs.readFileSync(new URL('src/styles.css', import.meta.url), 'utf8')
 for (const token of ['ThemeToggle','ProjectCard','MiniTerminal','Skills','Certifications','Competition','Dock','ScrollTop']) {
   if (!app.includes(token)) throw new Error('Missing app feature: ' + token)
 }
-for (const token of ['CareSwap','Tailwind','Docker','OCR','Advanced Git','AWS Cloud Quest','SnowPro Associate','AI Agents Fundamentals','Introduction to Kubernetes','Introduction to Docker','MLOps Fundamentals','End-to-End Machine Learning','Generative AI Fundamentals','AI4I®','Basic Proficiency in KNIME','PCEP™','Web Development Fundamentals','User Experience Design Fundamentals','Dell InnovateDash 2026 Finalist','AI Fluency Framework & Foundations']) {
+for (const token of ['CareSwap','Tailwind','Docker','OCR','Advanced Git','AWS Certified Cloud Practitioner','AWS Cloud Quest','SnowPro Associate','AI Agents Fundamentals','Introduction to Kubernetes','Introduction to Docker','MLOps Fundamentals','End-to-End Machine Learning','Generative AI Fundamentals','AI4I®','Basic Proficiency in KNIME','PCEP™','Web Development Fundamentals','User Experience Design Fundamentals','Dell InnovateDash 2026 Finalist','AI Fluency Framework & Foundations']) {
   if (!data.includes(token)) throw new Error('Missing data: ' + token)
 }
 for (const token of ['.dock','.skill-grid','.competition-card','.recognition-grid','.cert-grid','.certificate-logo','.scroll-top','data-theme']) {
@@ -34,8 +34,10 @@ if (!(careIndex >= 0 && aerisIndex >= 0 && careIndex < aerisIndex)) throw new Er
 
 const certStart = data.indexOf('certifications: [')
 const firstAdvanced = data.indexOf("title: 'Advanced Git'", certStart)
-const firstAws = data.indexOf("title: 'AWS Cloud Quest: Cloud Practitioner'", certStart)
+const firstAws = data.indexOf("title: 'AWS Certified Cloud Practitioner'", certStart)
 const firstSnow = data.indexOf("title: 'SnowPro Associate: Platform Certification'", certStart)
+const awsQuest = data.indexOf("title: 'AWS Cloud Quest: Cloud Practitioner'", certStart)
+if (awsQuest < firstSnow) throw new Error('AWS Cloud Quest should sit below the featured top three')
 if (!(firstAdvanced < firstAws && firstAws < firstSnow)) throw new Error('Featured certification order is incorrect')
 
 const forbiddenReactApis = ['React.Fragment','React.useState','React.useEffect','React.useMemo','ReactDOM.createRoot']
@@ -57,4 +59,4 @@ if (data.includes("href: '#'")) throw new Error('Dead project href placeholders 
 if (!data.includes("access: 'Public GitHub repository'") || !data.includes("repo: 'https://github.com/K9lv1n/hermes-telegram-email-bot'")) throw new Error('Hermes public repository metadata missing')
 if (!app.includes("className:'project-access'")) throw new Error('Standardized project access footer missing')
 
-console.log('Verification passed: all 16 credentials, issuer logos, updated skills, CareSwap-before-AERIS experience order, project stack updates, recognition assets, dock, theme and back-to-top control are present.')
+console.log('Verification passed: all 17 credentials, issuer logos, updated skills, CareSwap-before-AERIS experience order, project stack updates, recognition assets, dock, theme and back-to-top control are present.')

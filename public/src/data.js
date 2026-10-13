@@ -133,13 +133,13 @@ window.PORTFOLIO = {
     },
     {
       issuer: 'Amazon Web Services',
-      title: 'AWS Cloud Quest: Cloud Practitioner',
-      issued: 'Sep 2026',
-      credential: 'Credential ID 8731acb6-b03a-499d-b562-5eac4fd96dfe',
+      title: 'AWS Certified Cloud Practitioner',
+      issued: 'Oct 2026',
+      credential: 'Credential ID 6c98a54440524079a7efbb71741953e2',
       logo: '/assets/logo-aws.jpg',
       featured: true,
       status: 'View credential',
-      href: 'https://www.credly.com/badges/8731acb6-b03a-499d-b562-5eac4fd96dfe/linked_in_profile'
+      href: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/6c98a54440524079a7efbb71741953e2'
     },
     {
       issuer: 'Snowflake',
@@ -150,6 +150,15 @@ window.PORTFOLIO = {
       featured: true,
       status: 'View credential',
       href: 'https://achieve.snowflake.com/254e1fae-8a76-4077-8377-1200bf2563b5'
+    },
+    {
+      issuer: 'Amazon Web Services',
+      title: 'AWS Cloud Quest: Cloud Practitioner',
+      issued: 'Sep 2026',
+      credential: 'Credential ID 8731acb6-b03a-499d-b562-5eac4fd96dfe',
+      logo: '/assets/logo-aws.jpg',
+      status: 'View credential',
+      href: 'https://www.credly.com/badges/8731acb6-b03a-499d-b562-5eac4fd96dfe/linked_in_profile'
     },
     {
       issuer: 'Hugging Face',
