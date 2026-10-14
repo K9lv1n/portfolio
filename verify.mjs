@@ -4,7 +4,7 @@ import vm from 'node:vm'
 const required = [
   'index.html','server.mjs','src/app.js','src/data.js','src/styles.css',
   'assets/hero-workspace.jpg','assets/aeris-preview.jpg','assets/resume-lens-preview.jpg','assets/arcanevault-preview.jpg',
-  'assets/Kalvin_Chin_Resume.pdf','assets/dell-innovatedash-badge.png','assets/noai-bronze-certificate.png','assets/noai-award-photo.jpg','assets/directors-list-certificate.png',
+  'assets/Chin_Kai_Mun_Resume.pdf','assets/dell-innovatedash-badge.png','assets/noai-bronze-certificate.png','assets/noai-award-photo.jpg','assets/directors-list-certificate.png',
   'assets/logo-anthropic.jpg','assets/logo-dell.jpg','assets/logo-python-institute.jpg','assets/logo-ibm.jpg','assets/logo-snowflake.jpg','assets/logo-knime.jpg','assets/logo-aisingapore.jpg','assets/logo-databricks.jpg','assets/logo-datacamp.jpg','assets/logo-aws.jpg','assets/logo-huggingface.jpg',
   'vendor/react.production.min.js','vendor/react-dom.production.min.js'
 ]
@@ -47,8 +47,8 @@ if (usedForbidden.length) throw new Error('Bundled React compatibility issue: ' 
 new vm.Script(app, { filename: 'src/app.js' })
 new vm.Script(data, { filename: 'src/data.js' })
 
-if (!data.includes("resume: '/assets/Kalvin_Chin_Resume.pdf'")) throw new Error('Resume asset is not wired into portfolio data')
-if (!app.includes("download:'Kalvin_Chin_Resume.pdf'")) throw new Error('Resume download attribute is missing')
+if (!data.includes("resume: '/assets/Chin_Kai_Mun_Resume.pdf'")) throw new Error('Resume asset is not wired into portfolio data')
+if (!app.includes("download:'Chin_Kai_Mun_Resume.pdf'")) throw new Error('Resume download attribute is missing')
 if (!fs.readFileSync(new URL('server.mjs', import.meta.url), 'utf8').includes("'.pdf': 'application/pdf'")) throw new Error('PDF MIME type missing from server')
 
 if (!data.includes('Hermes') || !data.includes('Telegram Email Assistant') || !data.includes('hermes-telegram-email-bot')) throw new Error('Missing Hermes project data')

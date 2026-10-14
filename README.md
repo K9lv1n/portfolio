@@ -1,4 +1,4 @@
-# Kalvin Developer Portfolio
+# Chin Kai Mun Developer Portfolio
 
 A polished personal portfolio for AI, data and software internship applications. The site combines a clean editorial layout with a restrained developer aesthetic, image-led project work, light/dark themes and a compact macOS-inspired navigation dock.
 
@@ -34,7 +34,7 @@ A polished personal portfolio for AI, data and software internship applications.
 
 ## Run locally
 
-No dependency installation is required. The bundled resume download is available at `assets/Kalvin_Chin_Resume.pdf`.
+No dependency installation is required. The bundled resume download is available at `assets/Chin_Kai_Mun_Resume.pdf`.
 
 ```bash
 npm run verify

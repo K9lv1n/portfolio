@@ -1,8 +1,8 @@
 window.PORTFOLIO = {
   profile: {
-    initials: 'KL',
-    name: 'Kalvin Chin',
-    firstName: 'Kalvin',
+    initials: 'CKM',
+    name: 'Chin Kai Mun',
+    firstName: 'Kai Mun',
     role: 'Applied AI & Data Analytics Student',
     location: 'Singapore',
     availability: 'Open to 1-year internship opportunities',
@@ -13,7 +13,7 @@ window.PORTFOLIO = {
     email: 'kalvinchin2@gmail.com',
     github: 'https://github.com/K9lv1n',
     linkedin: 'https://www.linkedin.com/in/kalvin-chin-b11464270',
-    resume: '/assets/Kalvin_Chin_Resume.pdf'
+    resume: '/assets/Chin_Kai_Mun_Resume.pdf'
   },
 
   tech: ['Python', 'React', 'Node.js', 'FastAPI', 'PyTorch', 'Firebase', 'Google Cloud', 'Docker', 'OCR', 'Git'],
@@ -326,7 +326,7 @@ window.PORTFOLIO = {
   },
 
   terminal: [
-    { command: 'whoami', output: 'Kalvin · Applied AI & Analytics' },
+    { command: 'whoami', output: 'Chin Kai Mun · Applied AI & Analytics' },
     { command: 'cat focus.txt', output: 'AI engineering · MLOps · cloud · product' },
     { command: './portfolio --status', output: 'open to opportunities · always learning' }
   ]
